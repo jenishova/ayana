@@ -1,44 +1,35 @@
-''''''
+class Noutbook:
+    #Характеристики
+    prosessor = 0
+    operate_memory = 0
+    view_map= 0
+    hdd = 0
+    matherboard = bool
+    screen_size = 0
 
-#Возьмите код #1 и создайте для него try... except... Создайте несколько except выражений для разных типов ошибок.
-Code #1:
+    def __init__(self,name,type):
+        self.name = name
+        self.type = type
+        if self.type == 'acer':
+            self.prosessor = 'Intel® Core™ i5-12400F 6-ядерный 2,50 ГГц'
+            self.operate_memory = '8GB'
+            self.view_map = '256mb'
+            self.hdd = 'FHD DOS черный'
+            self.matherboard = 'DA0ZRPMB6D0 Rev:D Acer Aspire V5-551 CPU AMD A8-4555M 1,6GHz.'
+            self.screen_size = '(16:9)'
 
-at = 10
-in = 15
-wo = 20
+        elif self.type == 'asus':
+            self.prosessor = ''
+            self.operate_memory = '8GB'
+            self.view_map = '256mb'
+            self.hdd = 'Aura Sync lighting'
+            self.matherboard = '3 PCIe 4.0 x16,'
+            self.screen_size = '1920x1080'
+        else:
+            print('it is makbook')
 
-for e in range(-at, at):
-print(wo / e)
-if at > '5':
-print("at > 5)
-try:
-    print("at > 5)
-except SyntaxError as se:
-    print("ulala")
-else:
-    print("No exception")
-finally:
-    print("mimimi")
 
-#3
-Перенесите к себе код #2 и исправьте все ошибки, сделайте так чтобы работал. Если не знаете как исправить ошибку создайте для неё except выражение
-Code #2:
-list = []
-for i in range(10):
-list.apend(i)
-
-a = list(revesed(list))
-sls_obj = slice('0','8')
-print(а[sls_obj])
-
-#4
-
-Перенесите к себе код #3 и исправьте все ошибки, сделайте так чтобы код работал. Если не знаете как исправить ошибку создайте для неё except выражение.
-Code #3:
-a = (0)
-b = (1)
-numbers = []
-while b > a:
-numbers += b
-b += 1
-
+acer = Noutbook('acers', 'acer')
+print(acer.__dict__)
+asus = Noutbook('asuss', 'asus')
+print(asus.__dict__)
